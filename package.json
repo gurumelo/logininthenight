@@ -1,0 +1,19 @@
+{
+  "name": "logininthenight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.15.0",
+    "escape-htmlandmongo": "^1.0.3",
+    "express": "^4.15.2",
+    "jsdecrypt": "^1.0.4",
+    "mongoose": "^4.9.0",
+    "validator": "^7.0.0"
+  }
+}

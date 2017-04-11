@@ -1,0 +1,4 @@
+{
+	"puerto": 1984,
+	"mongo": "localhost/aplicacion"
+}
