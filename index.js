@@ -1,16 +1,16 @@
-var confi						= require('./confi.json');
-var validator				= require('validator');
-var argon2					= require('argon2');
-var escape					= require('escape-htmlandmongo');
-var fs							= require('fs');
-var jsdecrypt				= require('jsdecrypt');
-var lallaveprivada 	= fs.readFileSync('./privada.key', 'utf8');
-var express					= require('express');
-var app							= express();
+var confi = require('./confi.json');
+var validator = require('validator');
+var argon2  = require('argon2');
+var escape  = require('escape-htmlandmongo');
+var fs  = require('fs');
+var jsdecrypt = require('jsdecrypt');
+var lallaveprivada  = fs.readFileSync('./privada.key', 'utf8');
+var express = require('express');
+var app = express();
 
-var mongoose				= require('mongoose');
+var mongoose  = require('mongoose');
 mongoose.connect('mongodb://'+ confi.mongo);
-var Usuaris					= require('./models/usuaris.js');
+var Usuaris = require('./models/usuaris.js');
 
 
 //curl -n -v http://localhost:1984/api/ubxDRS2uT4WNFfgL%2FtSlriXUqXHuqceSBj9EQVVwn7%2FtTm81YOSt1H3toFiixwu4bjVF6kjFONZy93J3MSuI%2BuO4YPC%2B5XTrtMtAYq0%2BsOr7IeVvRMh9340Bzgy52TF%2ByOWpuNFRT3vakcAMDFYxznxVFVK06%2FsfdAXObSIBrygjwNXFOddYfUz7aDNE9lzjIyESrg4J%2Bcqaxc756tC5yJmHd381hsODuyC5KWLbq5LG5a3D%2B1yPTKkyd2LY7hBGq9ToB2i5cPOVgNlX81CN4TPwtM4yCYoRA7vFStM7e4nrgsODs6rxe80d8dtoGmCXocaGwx2m8NVgn6cQaySe%2FJ%2FsGwCCsIHQtMbvzrwRYQRIY7Rnb0p41ke9DwhNvUocuUOnGE1FYslyDb0uyKjtqbURPEHppcbTcjfPTVbNjhTyeG5dW6brpGasS7PAAjPugpyt4%2F0jcoKo%2Fg08ND6Bs6Zw6kpbH0aRC%2BAvF1oHfsVc3o4%2FSx65%2BzUhCTy0In4JxkX7AJYr5lIIg1wfikJ3o4f1jZTexE2GXHN9eILF6LG9gFw3EkihVm3zrTYle8ojO3hZJ6aoCe9TMUd54MeinmOglwU6LBsY6xZBJCRVWCYWuBljbLYu5OIW%2Bc4H4g4%2Fx1Xi7s1zWq2Qg0%2B6TNWALYDWzQY%3D/FI%2FFICihmUHdPtiFt4iTaBtXwp%2F2YIXHJcrBPhP0M11%2F3He78Twmy8nDsmRl%2B8Fs74Z%2BT1PELJrO7dO%2FsFSq8WgZAoGWP%2FKeKJHUEDizPDLEaFuQZiZWmUSY9azM%2B%2F9QQovDZU6mczHcBc2cMNMmvjyeOyU1MGaCON23vLVrbIdvkspOX7bpcq0Dz1WYkOTNFyZzNrBjXxAs36k1r0FjbWXJTwt9VgoyveayRDCZ%2BfS%2BtmI1H5gey3S%2BH%2BjhaqbTpe23FJf%2B2MTFSt1NX%2F8yl09RKB8yymvKsR9bbDo3H2zM4bLiJ3ZC3GrGMeH9SggMEOJGRBP0JtqinuWYzKs9Je5v3MF7HM8KND8qRugNinuGPqwbSkrYlk0pNpYEszfBfec%2BYelVWgyda6hCM2SFyJCyQYxCsonO%2FRw93OypiNqGNI4x4ipcFFOqHgPdBqPa%2B5CqrClKo0%2FMk5ioLH3prhwtJ0AIfmehcbE8tlMoWEZCffVB8AtT0FYDB%2Bm6IQMrxGpw0nLmkWlOx0G6BQ1jkyjpQf91ldxtr%2FX9SB66nLnzvQcaDr8wsvkDYx5RridsLaVBX%2FXLwjHvAzCciqz6g2VZppaPgo4fVBX%2B5LBEW3DSQ4TsmmIjnAQuDoQXK%2BDFAoy1k%2BKxqh0P5x7YN02KaOeQBfton4qBp3BvEOMzYYg%3D
